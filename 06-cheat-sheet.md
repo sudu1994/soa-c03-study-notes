@@ -48,7 +48,7 @@
 | <b>Low</b>est-<b>late</b>ncy <b>Hi</b>gh-<b>Perfor</b>mance <b>Compu</b>ting (HPC) <b>nod</b>es | **Cluster placement group + Elastic Network Adapter (ENA)/Elastic Fabric Adapter (EFA)** |
 | AI-<b>assi</b>sted [<b>inci</b>dent](00-cloudops-basics.md#incident-mttd-and-mttr) <b>investi</b>gation | **AWS DevOps Agent** |
 | [<b>Bedr</b>ock](00-cloudops-basics.md#generative-ai-and-foundation-models) <b>usa</b>ge/<b>late</b>ncy/<b>thro</b>ttle <b>monit</b>oring | <b>Bedr</b>ock **CloudWatch metrics + model invocation logging** |
-| <b>Kuber</b>netes <b>metr</b>ics <b>wi</b>th <b>Prome</b>theus <b>Que</b>ry <b>Lang</b>uage (<b>Pro</b>mQL) | **Managed Service for Prometheus** (+ <b>Mana</b>ged <b>Graf</b>ana) |
+| <b>Kuber</b>netes <b>metr</b>ics <b>wi</b>th <b>Prome</b>theus <b>Que</b>ry <b>Lang</b>uage (PromQL) | **Managed Service for Prometheus** (+ <b>Mana</b>ged <b>Graf</b>ana) |
 
 ### Reliability and backup
 
@@ -75,7 +75,7 @@
 | <b>Pro</b>ve <b>bac</b>kup <b>compl</b>iance | **Backup Audit Manager** |
 | <b>Autom</b>ated EBS [<b>snaps</b>hots](00-cloudops-basics.md#backup-vs-snapshot-vs-replication) <b>b</b>y <b>t</b>ag | **Data Lifecycle Manager** |
 | <b>Reco</b>ver <b>dele</b>ted <b>snap</b>shot/AMI | **Recycle Bin** |
-| <b>Un</b>do <b>b</b>ad <b>Aur</b>ora <b>MyS</b>QL <b>cha</b>nge <b>i</b>n <b>pla</b>ce | **Backtrack** |
+| <b>Un</b>do <b>b</b>ad <b>Aur</b>ora MySQL <b>cha</b>nge <b>i</b>n <b>pla</b>ce | **Backtrack** |
 | <b>Rest</b>ore <b>t</b>o <b>bef</b>ore <b>accid</b>ental <b>del</b>ete | **[Point-In-Time Recovery [PITR]](00-cloudops-basics.md#point-in-time-recovery-pitr)** (<b>crea</b>tes <b>n</b>ew <b>inst</b>ance/<b>tab</b>le) |
 | <b>Use</b>rs <b>reco</b>ver <b>overwr</b>itten S3 <b>obje</b>cts | **[Versioning](00-cloudops-basics.md#versioning)** |
 | <b>Versi</b>oned <b>buc</b>ket <b>grow</b>ing | **Noncurrent version expiration** |
@@ -123,7 +123,7 @@
 | <b>Enco</b>ded <b>authori</b>zation <b>fail</b>ure | **`sts decode-authorization-message`** |
 | <b>Aud</b>it <b>k</b>ey <b>a</b>ge/MFA <b>f</b>or <b>a</b>ll <b>use</b>rs | **Credential report** |
 | <b>Blo</b>ck <b>unapp</b>roved <b>Regi</b>ons | **Service Control Policy (SCP) with `aws:RequestedRegion`** |
-| <b>Workf</b>orce <b>Sin</b>gle <b>Si</b>gn-<b>O</b>n (SSO) <b>wi</b>th <b>corpo</b>rate <b>Iden</b>tity <b>Prov</b>ider (<b>I</b>dP) | **IAM Identity Center** (+ <b>Sys</b>tem <b>f</b>or <b>Cro</b>ss-<b>dom</b>ain <b>Iden</b>tity <b>Manag</b>ement [SCIM]) |
+| <b>Workf</b>orce <b>Sin</b>gle <b>Si</b>gn-<b>O</b>n (SSO) <b>wi</b>th <b>corpo</b>rate <b>Iden</b>tity <b>Prov</b>ider (IdP) | **IAM Identity Center** (+ <b>Sys</b>tem <b>f</b>or <b>Cro</b>ss-<b>dom</b>ain <b>Iden</b>tity <b>Manag</b>ement [SCIM]) |
 | <b>Trus</b>ted <b>Advi</b>sor <b>fla</b>gs <b>op</b>en <b>Sec</b>ure <b>She</b>ll (SSH) | <b>Rest</b>rict SG; <b>Con</b>fig <b>ru</b>le + [<b>remedi</b>ation](00-cloudops-basics.md#remediation) |
 | <b>Auto</b>mate <b>o</b>n <b>Trus</b>ted <b>Advi</b>sor <b>resu</b>lts | **EventBridge (us-east-1) → Lambda** |
 | <b>O</b>rg-<b>wi</b>de <b>Paym</b>ent <b>Ca</b>rd <b>Indu</b>stry (PCI)/<b>Cen</b>ter <b>f</b>or <b>Inte</b>rnet <b>Secu</b>rity (CIS) <b>ru</b>le <b>bun</b>dle | **Config conformance pack** |
@@ -228,5 +228,5 @@
 | VPN | 2 <b>tunn</b>els, ~1.25 <b>Gb</b>ps <b>ea</b>ch |
 | <b>Cloud</b>Front <b>ori</b>gin <b>resp</b>onse <b>time</b>out | 30 <b>s</b> <b>defa</b>ult; <b>err</b>or [<b>cach</b>ing](00-cloudops-basics.md#caching) 10 <b>s</b> <b>defa</b>ult |
 | S3 <b>p</b>er <b>pre</b>fix | 3,500 <b>wri</b>tes / 5,500 <b>rea</b>ds <b>p</b>er <b>sec</b>ond |
-| gp3 <b>base</b>line | 3,000 IOPS / 125 <b>M</b>iB/<b>s</b> |
+| gp3 <b>base</b>line | 3,000 IOPS / 125 MiB/<b>s</b> |
 | <b>Spr</b>ead <b>place</b>ment <b>gro</b>up | 7 <b>insta</b>nces <b>p</b>er AZ |

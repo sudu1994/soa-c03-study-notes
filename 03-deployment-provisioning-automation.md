@@ -105,7 +105,7 @@
 | "<b>Reso</b>urce <b>alre</b>ady <b>exi</b>sts" | <b>Ha</b>rd-<b>cod</b>ed <b>phys</b>ical <b>nam</b>es <b>coll</b>ide | <b>L</b>et <b>CloudFo</b>rmation <b>gene</b>rate <b>nam</b>es <b>o</b>r <b>u</b>se `Fn::Sub` <b>wi</b>th <b>sta</b>ck <b>na</b>me |
 | "<b>Exp</b>ort <b>can</b>not <b>b</b>e <b>upda</b>ted/<b>dele</b>ted <b>a</b>s <b>i</b>t <b>i</b>s <b>i</b>n <b>u</b>se" | <b>Cro</b>ss-<b>sta</b>ck <b>imp</b>ort | <b>Upd</b>ate <b>impor</b>ting <b>sta</b>cks <b>fir</b>st |
 | `Insufficient permissions` / `AccessDenied` | <b>Cal</b>ler <b>o</b>r **stack service role** <b>lac</b>ks <b>permis</b>sions; <b>miss</b>ing **`iam:PassRole`**; `CAPABILITY_IAM`/`CAPABILITY_NAMED_IAM`/`CAPABILITY_AUTO_EXPAND` <b>n</b>ot <b>acknow</b>ledged | <b>A</b>dd <b>permis</b>sions/<b>capabi</b>lities |
-| <b>Lim</b>it <b>exce</b>eded | [<b>Serv</b>ice <b>quo</b>tas](00-cloudops-basics.md#service-quotas) (<b>Virt</b>ual <b>Priv</b>ate <b>Clo</b>uds [VPCs], <b>Elas</b>tic IP <b>addre</b>sses [EIPs], <b>virt</b>ual CPUs [<b>vCP</b>Us]) | <b>Requ</b>est <b>quo</b>ta <b>incr</b>ease |
+| <b>Lim</b>it <b>exce</b>eded | [<b>Serv</b>ice <b>quo</b>tas](00-cloudops-basics.md#service-quotas) (<b>Virt</b>ual <b>Priv</b>ate <b>Clo</b>uds [VPCs], <b>Elas</b>tic IP <b>addre</b>sses [EIPs], <b>virt</b>ual CPUs [vCPUs]) | <b>Requ</b>est <b>quo</b>ta <b>incr</b>ease |
 
 **Other deployment issues:**
 
@@ -160,7 +160,7 @@
   - **State**: <b>ma</b>ps <b>con</b>fig <b>t</b>o <b>re</b>al <b>resou</b>rces; **remote backend in S3** ([<b>versi</b>oning](00-cloudops-basics.md#versioning) + <b>encry</b>ption <b>enab</b>led) <b>wi</b>th **state locking** (S3 <b>nat</b>ive <b>lo</b>ck <b>fi</b>le `use_lockfile`, <b>o</b>r <b>leg</b>acy <b>Dyna</b>moDB <b>tab</b>le) <b>t</b>o <b>st</b>op <b>concu</b>rrent <b>appl</b>ies; <b>nev</b>er <b>ed</b>it <b>sta</b>te <b>b</b>y <b>ha</b>nd; <b>prot</b>ect <b>i</b>t (<b>cont</b>ains <b>secr</b>ets).
   - **Drift**: `terraform plan` <b>sho</b>ws <b>differ</b>ences <b>fr</b>om <b>re</b>al <b>infrast</b>ructure (`-refresh-only` <b>t</b>o <b>upd</b>ate <b>sta</b>te).
   - **Workspaces** (<b>mult</b>iple <b>sta</b>tes <b>p</b>er <b>con</b>fig, <b>e</b>.g., <b>d</b>ev/<b>pr</b>od), **for_each/count**, `lifecycle { prevent_destroy, create_before_destroy, ignore_changes }`.
-  - **AWS auth**: IAM <b>ro</b>le (<b>ass</b>ume <b>ro</b>le <b>i</b>n <b>prov</b>ider), <b>Ope</b>nID <b>Conn</b>ect (OIDC) <b>fr</b>om CI (<b>Git</b>Hub <b>Acti</b>ons → `AssumeRoleWithWebIdentity`), <b>nev</b>er <b>lo</b>ng-<b>liv</b>ed <b>ke</b>ys <b>i</b>n <b>co</b>de.
+  - **AWS auth**: IAM <b>ro</b>le (<b>ass</b>ume <b>ro</b>le <b>i</b>n <b>prov</b>ider), OpenID <b>Conn</b>ect (OIDC) <b>fr</b>om CI (<b>Git</b>Hub <b>Acti</b>ons → `AssumeRoleWithWebIdentity`), <b>nev</b>er <b>lo</b>ng-<b>liv</b>ed <b>ke</b>ys <b>i</b>n <b>co</b>de.
   - **AWS integrations**: <b>Serv</b>ice <b>Cata</b>log <b>supp</b>orts <b>Terra</b>form <b>prod</b>ucts; **Control Tower Account Factory for Terraform (AFT)**; **AWS Cloud Control Application Programming Interface (API)** <b>prov</b>ider (`awscc`) <b>f</b>or <b>n</b>ew <b>resou</b>rces.
   - <b>Troubles</b>hooting: "<b>Err</b>or <b>acqui</b>ring <b>t</b>he <b>sta</b>te <b>lo</b>ck" → <b>anot</b>her <b>app</b>ly <b>runn</b>ing <b>o</b>r <b>a</b> <b>sta</b>le <b>lo</b>ck (`force-unlock` <b>caref</b>ully); <b>prov</b>ider <b>vers</b>ion <b>constr</b>aints; <b>permi</b>ssion <b>err</b>ors <b>fr</b>om AWS API (<b>che</b>ck <b>Cloud</b>Trail).
 - **Git**:

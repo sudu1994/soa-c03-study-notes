@@ -62,16 +62,16 @@ SAA <b>as</b>ks *<b>whi</b>ch <b>des</b>ign*. <b>Sta</b>rt <b>o</b>f <b>Autho</b
 ## Automation and infrastructure concepts
 
 ### Infrastructure as Code (IaC)
-<b>Descr</b>ibing <b>infrast</b>ructure <b>i</b>n <b>fil</b>es (<b>templ</b>ates/<b>co</b>de) <b>s</b>o <b>i</b>t <b>c</b>an <b>b</b>e <b>crea</b>ted, <b>chan</b>ged <b>a</b>nd <b>dele</b>ted <b>repea</b>tably, <b>revi</b>ewed <b>i</b>n <b>G</b>it <b>a</b>nd <b>rol</b>led <b>ba</b>ck. <b>CloudFo</b>rmation, <b>Clo</b>ud <b>Develo</b>pment <b>K</b>it (CDK) <b>a</b>nd <b>Terra</b>form <b>a</b>re <b>Infrast</b>ructure <b>a</b>s <b>Co</b>de (<b>I</b>aC) <b>too</b>ls.
+<b>Descr</b>ibing <b>infrast</b>ructure <b>i</b>n <b>fil</b>es (<b>templ</b>ates/<b>co</b>de) <b>s</b>o <b>i</b>t <b>c</b>an <b>b</b>e <b>crea</b>ted, <b>chan</b>ged <b>a</b>nd <b>dele</b>ted <b>repea</b>tably, <b>revi</b>ewed <b>i</b>n <b>G</b>it <b>a</b>nd <b>rol</b>led <b>ba</b>ck. <b>CloudFo</b>rmation, <b>Clo</b>ud <b>Develo</b>pment <b>K</b>it (CDK) <b>a</b>nd <b>Terra</b>form <b>a</b>re <b>Infrast</b>ructure <b>a</b>s <b>Co</b>de (IaC) <b>too</b>ls.
 
 ### Declarative vs imperative
 **Declarative** = <b>desc</b>ribe <b>t</b>he <b>desi</b>red <b>e</b>nd <b>sta</b>te; <b>t</b>he <b>to</b>ol <b>wor</b>ks <b>o</b>ut <b>t</b>he <b>ste</b>ps (<b>CloudFo</b>rmation, <b>Terra</b>form). **Imperative** = <b>li</b>st <b>t</b>he <b>ste</b>ps <b>t</b>o <b>r</b>un (<b>scri</b>pts, <b>Comm</b>and <b>Li</b>ne <b>Inter</b>face [CLI] <b>comm</b>ands).
 
 ### Drift
-<b>Wh</b>en <b>re</b>al <b>resou</b>rces <b>n</b>o <b>lon</b>ger <b>mat</b>ch <b>the</b>ir <b>I</b>aC <b>defin</b>ition <b>beca</b>use <b>some</b>one <b>chan</b>ged <b>th</b>em <b>b</b>y <b>ha</b>nd. <b>Dri</b>ft <b>detec</b>tion <b>fin</b>ds <b>i</b>t.
+<b>Wh</b>en <b>re</b>al <b>resou</b>rces <b>n</b>o <b>lon</b>ger <b>mat</b>ch <b>the</b>ir IaC <b>defin</b>ition <b>beca</b>use <b>some</b>one <b>chan</b>ged <b>th</b>em <b>b</b>y <b>ha</b>nd. <b>Dri</b>ft <b>detec</b>tion <b>fin</b>ds <b>i</b>t.
 
 ### Idempotent
-<b>Runn</b>ing <b>a</b>n <b>opera</b>tion <b>twi</b>ce <b>giv</b>es <b>t</b>he <b>sa</b>me <b>res</b>ult <b>a</b>s <b>on</b>ce. <b>I</b>aC <b>a</b>nd <b>go</b>od <b>autom</b>ation <b>scri</b>pts <b>a</b>re <b>idemp</b>otent, <b>s</b>o <b>retr</b>ies <b>a</b>re <b>sa</b>fe.
+<b>Runn</b>ing <b>a</b>n <b>opera</b>tion <b>twi</b>ce <b>giv</b>es <b>t</b>he <b>sa</b>me <b>res</b>ult <b>a</b>s <b>on</b>ce. IaC <b>a</b>nd <b>go</b>od <b>autom</b>ation <b>scri</b>pts <b>a</b>re <b>idemp</b>otent, <b>s</b>o <b>retr</b>ies <b>a</b>re <b>sa</b>fe.
 
 ### Desired state configuration
 <b>Contin</b>uously <b>enfor</b>cing <b>th</b>at <b>mach</b>ines <b>st</b>ay <b>i</b>n <b>a</b> <b>defi</b>ned <b>configu</b>ration (<b>e</b>.g., <b>age</b>nt <b>insta</b>lled, <b>po</b>rt <b>clo</b>sed), <b>r</b>e-<b>appl</b>ying <b>i</b>t <b>i</b>f <b>i</b>t <b>dri</b>fts (<b>Syst</b>ems <b>Mana</b>ger <b>Sta</b>te <b>Mana</b>ger).
@@ -98,7 +98,7 @@ SAA <b>as</b>ks *<b>whi</b>ch <b>des</b>ign*. <b>Sta</b>rt <b>o</b>f <b>Autho</b
 **Git** <b>i</b>s <b>vers</b>ion <b>cont</b>rol: <b>a</b> **repository** <b>hol</b>ds <b>fil</b>es <b>a</b>nd <b>the</b>ir <b>hist</b>ory; <b>a</b> **commit** <b>i</b>s <b>a</b> <b>sav</b>ed <b>cha</b>nge; <b>a</b> **branch** <b>i</b>s <b>a</b> <b>sepa</b>rate <b>li</b>ne <b>o</b>f <b>wo</b>rk; <b>a</b> **pull request (merge request)** <b>prop</b>oses <b>merg</b>ing <b>a</b> <b>bra</b>nch <b>aft</b>er <b>rev</b>iew. **GitOps** <b>mea</b>ns <b>t</b>he <b>G</b>it <b>repos</b>itory <b>i</b>s <b>t</b>he <b>sou</b>rce <b>o</b>f <b>tru</b>th <b>a</b>nd <b>pipel</b>ines <b>app</b>ly <b>wha</b>t's <b>mer</b>ged.
 
 ### Terraform basics
-<b>HashiC</b>orp's <b>I</b>aC <b>to</b>ol <b>usi</b>ng HCL (<b>Hashi</b>Corp <b>Configu</b>ration <b>Lang</b>uage). **Providers** <b>ta</b>lk <b>t</b>o <b>Applic</b>ation <b>Progra</b>mming <b>Inter</b>faces [APIs] (<b>t</b>he AWS <b>prov</b>ider). **State** <b>reco</b>rds <b>wh</b>at <b>Terra</b>form <b>crea</b>ted; <b>sto</b>re <b>i</b>t <b>remo</b>tely <b>i</b>n **S3** <b>wi</b>th **state locking** (<b>Dyna</b>moDB <b>tab</b>le <b>o</b>r S3 <b>nat</b>ive <b>lo</b>ck <b>fi</b>le) <b>s</b>o <b>t</b>wo <b>peo</b>ple <b>can</b>'t <b>app</b>ly <b>a</b>t <b>on</b>ce. `terraform plan` <b>prev</b>iews, `terraform apply` <b>chan</b>ges, **modules** <b>a</b>re <b>reus</b>able <b>buil</b>ding <b>blo</b>cks.
+<b>HashiC</b>orp's IaC <b>to</b>ol <b>usi</b>ng HCL (<b>Hashi</b>Corp <b>Configu</b>ration <b>Lang</b>uage). **Providers** <b>ta</b>lk <b>t</b>o <b>Applic</b>ation <b>Progra</b>mming <b>Inter</b>faces [APIs] (<b>t</b>he AWS <b>prov</b>ider). **State** <b>reco</b>rds <b>wh</b>at <b>Terra</b>form <b>crea</b>ted; <b>sto</b>re <b>i</b>t <b>remo</b>tely <b>i</b>n **S3** <b>wi</b>th **state locking** (<b>Dyna</b>moDB <b>tab</b>le <b>o</b>r S3 <b>nat</b>ive <b>lo</b>ck <b>fi</b>le) <b>s</b>o <b>t</b>wo <b>peo</b>ple <b>can</b>'t <b>app</b>ly <b>a</b>t <b>on</b>ce. `terraform plan` <b>prev</b>iews, `terraform apply` <b>chan</b>ges, **modules** <b>a</b>re <b>reus</b>able <b>buil</b>ding <b>blo</b>cks.
 
 ### YAML and JSON
 <b>T</b>wo <b>te</b>xt <b>form</b>ats <b>f</b>or <b>struc</b>tured <b>da</b>ta. <b>CloudFo</b>rmation <b>templ</b>ates, <b>poli</b>cies <b>a</b>nd SSM <b>docum</b>ents <b>u</b>se <b>th</b>em. YAML <b>Ain</b>'t <b>Mar</b>kup <b>Lang</b>uage (YAML) <b>rel</b>ies <b>o</b>n <b>indent</b>ation (<b>mist</b>akes <b>cau</b>se <b>temp</b>late <b>err</b>ors); JSON <b>us</b>es <b>bra</b>ces <b>a</b>nd <b>quo</b>tes.
@@ -147,14 +147,14 @@ SAA <b>as</b>ks *<b>whi</b>ch <b>des</b>ign*. <b>Sta</b>rt <b>o</b>f <b>Autho</b
 <b>A</b> <b>serv</b>ice <b>rejec</b>ting <b>requ</b>ests <b>abo</b>ve <b>i</b>ts <b>ra</b>te <b>lim</b>it (HTTP 429 <b>o</b>r `ThrottlingException`). <b>F</b>ix <b>wi</b>th <b>retr</b>ies <b>wi</b>th **exponential backoff and jitter**, <b>requ</b>est <b>quo</b>ta <b>incre</b>ases, <b>o</b>r <b>smoot</b>hing <b>traf</b>fic (<b>que</b>ues).
 
 ### Service quotas
-<b>P</b>er-<b>acco</b>unt, <b>p</b>er-<b>Reg</b>ion <b>lim</b>its (<b>e</b>.g., <b>virt</b>ual CPU [<b>vC</b>PU] <b>lim</b>its <b>f</b>or <b>O</b>n-<b>Dem</b>and <b>insta</b>nces, <b>num</b>ber <b>o</b>f <b>Virt</b>ual <b>Priv</b>ate <b>Clo</b>uds [VPCs]). <b>Ma</b>ny <b>a</b>re <b>adjus</b>table <b>v</b>ia **Service Quotas**; <b>so</b>me <b>a</b>re <b>ha</b>rd <b>lim</b>its.
+<b>P</b>er-<b>acco</b>unt, <b>p</b>er-<b>Reg</b>ion <b>lim</b>its (<b>e</b>.g., <b>virt</b>ual CPU [vCPU] <b>lim</b>its <b>f</b>or <b>O</b>n-<b>Dem</b>and <b>insta</b>nces, <b>num</b>ber <b>o</b>f <b>Virt</b>ual <b>Priv</b>ate <b>Clo</b>uds [VPCs]). <b>Ma</b>ny <b>a</b>re <b>adjus</b>table <b>v</b>ia **Service Quotas**; <b>so</b>me <b>a</b>re <b>ha</b>rd <b>lim</b>its.
 
 ---
 
 ## Storage and performance concepts
 
 ### Block, file and object storage
-**Block** (EBS): <b>a</b> <b>di</b>sk <b>f</b>or <b>o</b>ne <b>inst</b>ance. **File** (<b>Elas</b>tic <b>Fi</b>le <b>Sys</b>tem [EFS], <b>F</b>Sx, S3 <b>Fil</b>es): <b>a</b> <b>sha</b>red <b>fi</b>le <b>sys</b>tem <b>moun</b>ted <b>b</b>y <b>ma</b>ny <b>clie</b>nts. **Object** (S3): <b>fil</b>es <b>sto</b>red <b>b</b>y <b>k</b>ey <b>v</b>ia HTTP <b>Applic</b>ation <b>Progra</b>mming <b>Inter</b>face (API).
+**Block** (EBS): <b>a</b> <b>di</b>sk <b>f</b>or <b>o</b>ne <b>inst</b>ance. **File** (<b>Elas</b>tic <b>Fi</b>le <b>Sys</b>tem [EFS], FSx, S3 <b>Fil</b>es): <b>a</b> <b>sha</b>red <b>fi</b>le <b>sys</b>tem <b>moun</b>ted <b>b</b>y <b>ma</b>ny <b>clie</b>nts. **Object** (S3): <b>fil</b>es <b>sto</b>red <b>b</b>y <b>k</b>ey <b>v</b>ia HTTP <b>Applic</b>ation <b>Progra</b>mming <b>Inter</b>face (API).
 
 ### IOPS, throughput and latency
 **Input/Output Operations Per Second (IOPS)**: <b>num</b>ber <b>o</b>f <b>re</b>ad/<b>wri</b>te <b>opera</b>tions <b>p</b>er <b>sec</b>ond (<b>sma</b>ll <b>ran</b>dom <b>I</b>/<b>O</b>, <b>datab</b>ases). **Throughput**: MB/<b>s</b> <b>mov</b>ed (<b>lar</b>ge <b>seque</b>ntial <b>I</b>/<b>O</b>). **Latency**: <b>ti</b>me <b>p</b>er <b>opera</b>tion. **Queue length**: <b>requ</b>ests <b>wait</b>ing; <b>a</b> <b>lo</b>ng <b>que</b>ue <b>mea</b>ns <b>t</b>he <b>vol</b>ume <b>can</b>'t <b>ke</b>ep <b>u</b>p.
@@ -185,7 +185,7 @@ SAA <b>as</b>ks *<b>whi</b>ch <b>des</b>ign*. <b>Sta</b>rt <b>o</b>f <b>Autho</b
 **Stateful** (<b>secu</b>rity <b>gro</b>ups): <b>ret</b>urn <b>traf</b>fic <b>i</b>s <b>automat</b>ically <b>allo</b>wed. **Stateless** (<b>netw</b>ork <b>Acc</b>ess <b>Cont</b>rol <b>Lis</b>ts [ACLs]): <b>y</b>ou <b>mu</b>st <b>all</b>ow <b>ret</b>urn <b>traf</b>fic <b>your</b>self, <b>usua</b>lly **ephemeral ports 1024–65535**.
 
 ### Ports and protocols
-TCP (<b>reli</b>able), <b>Us</b>er <b>Data</b>gram <b>Prot</b>ocol [UDP] (<b>fa</b>st, <b>connect</b>ionless), <b>Inte</b>rnet <b>Cont</b>rol <b>Mess</b>age <b>Prot</b>ocol [ICMP] (<b>pi</b>ng). <b>Com</b>mon <b>por</b>ts: 22 <b>Sec</b>ure <b>She</b>ll (SSH), 80 HTTP, 443 <b>Hyper</b>text <b>Tran</b>sfer <b>Prot</b>ocol <b>Sec</b>ure (HTTPS), 3389 <b>Rem</b>ote <b>Desk</b>top <b>Prot</b>ocol (RDP), 3306 <b>MyS</b>QL, 5432 <b>Postg</b>reSQL, 2049 <b>Netw</b>ork <b>Fi</b>le <b>Sys</b>tem (NFS), 53 <b>Dom</b>ain <b>Na</b>me <b>Sys</b>tem (DNS), 6379 <b>Red</b>is.
+TCP (<b>reli</b>able), <b>Us</b>er <b>Data</b>gram <b>Prot</b>ocol [UDP] (<b>fa</b>st, <b>connect</b>ionless), <b>Inte</b>rnet <b>Cont</b>rol <b>Mess</b>age <b>Prot</b>ocol [ICMP] (<b>pi</b>ng). <b>Com</b>mon <b>por</b>ts: 22 <b>Sec</b>ure <b>She</b>ll (SSH), 80 HTTP, 443 <b>Hyper</b>text <b>Tran</b>sfer <b>Prot</b>ocol <b>Sec</b>ure (HTTPS), 3389 <b>Rem</b>ote <b>Desk</b>top <b>Prot</b>ocol (RDP), 3306 MySQL, 5432 <b>Postg</b>reSQL, 2049 <b>Netw</b>ork <b>Fi</b>le <b>Sys</b>tem (NFS), 53 <b>Dom</b>ain <b>Na</b>me <b>Sys</b>tem (DNS), 6379 <b>Red</b>is.
 
 ### DNS, records and TTL
 DNS <b>tur</b>ns <b>nam</b>es <b>in</b>to IPs. <b>Rec</b>ord TTL <b>cont</b>rols <b>h</b>ow <b>lo</b>ng <b>resol</b>vers <b>cac</b>he <b>answ</b>ers; <b>aft</b>er <b>a</b> <b>cha</b>nge, <b>o</b>ld <b>answ</b>ers <b>c</b>an <b>pers</b>ist <b>unt</b>il <b>t</b>he TTL <b>expi</b>res.
@@ -222,7 +222,7 @@ DNS <b>tur</b>ns <b>nam</b>es <b>in</b>to IPs. <b>Rec</b>ord TTL <b>cont</b>rols
 <b>Mul</b>ti-<b>fac</b>tor <b>authent</b>ication: <b>pass</b>word <b>pl</b>us <b>a</b> <b>sec</b>ond <b>fac</b>tor (<b>authent</b>icator <b>a</b>pp, <b>hard</b>ware <b>k</b>ey).
 
 ### Federation
-<b>Sign</b>ing <b>i</b>n <b>wi</b>th <b>a</b>n <b>exis</b>ting <b>iden</b>tity (<b>corpo</b>rate <b>direc</b>tory <b>v</b>ia <b>Secu</b>rity <b>Asser</b>tion <b>Mar</b>kup <b>Lang</b>uage [SAML] 2.0, <b>o</b>r <b>Ope</b>nID <b>Conn</b>ect [OIDC] <b>provi</b>ders) <b>inst</b>ead <b>o</b>f <b>sepa</b>rate AWS <b>use</b>rs.
+<b>Sign</b>ing <b>i</b>n <b>wi</b>th <b>a</b>n <b>exis</b>ting <b>iden</b>tity (<b>corpo</b>rate <b>direc</b>tory <b>v</b>ia <b>Secu</b>rity <b>Asser</b>tion <b>Mar</b>kup <b>Lang</b>uage [SAML] 2.0, <b>o</b>r OpenID <b>Conn</b>ect [OIDC] <b>provi</b>ders) <b>inst</b>ead <b>o</b>f <b>sepa</b>rate AWS <b>use</b>rs.
 
 ### Encryption at rest and in transit
 <b>A</b>t <b>re</b>st: <b>da</b>ta <b>sto</b>red <b>o</b>n <b>di</b>sk <b>i</b>s <b>encry</b>pted <b>wi</b>th <b>ke</b>ys (KMS). <b>I</b>n <b>tran</b>sit: <b>da</b>ta <b>o</b>n <b>t</b>he <b>netw</b>ork <b>i</b>s <b>encry</b>pted (TLS, <b>Inte</b>rnet <b>Prot</b>ocol <b>Secu</b>rity [<b>IPs</b>ec]).

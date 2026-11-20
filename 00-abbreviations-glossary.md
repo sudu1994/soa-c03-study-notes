@@ -138,7 +138,7 @@
 | **OAC** | <b>Ori</b>gin <b>Acc</b>ess <b>Cont</b>rol |
 | **OAI** | <b>Ori</b>gin <b>Acc</b>ess <b>Iden</b>tity |
 | **OCSF** | <b>Op</b>en <b>Cyberse</b>curity <b>Sch</b>ema <b>Frame</b>work |
-| **OIDC** | <b>Ope</b>nID <b>Conn</b>ect |
+| **OIDC** | OpenID <b>Conn</b>ect |
 | **OS** | <b>Opera</b>ting <b>Sys</b>tem |
 | **OU** | <b>Organiz</b>ational <b>Un</b>it |
 | **p99** | 99th <b>perce</b>ntile |
